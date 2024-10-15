@@ -1,0 +1,76 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Form Validation - Method 1</title>
+    <link rel="stylesheet" href="css/style.css" type="text/css"/>
+    <!-- Include jQuery -->
+    <script src="https://code.jquery.com/jquery-3.6.0.min.js"></script>
+</head>
+<body>
+    <div class="form-container">
+        <h1>Form Validation - Method 1</h1>
+
+        <form id="form1" action="#" method="post">
+            <div class="form-group">
+                <label for="name">Name:</label>
+                <input type="text" id="name1" name="name">
+                <span class="error" id="nameError1"></span>
+            </div>
+
+            <div class="form-group">
+                <label>Hobbies:</label><br>
+                <input type="checkbox" id="hobbyReading1" name="hobbies1[]" value="Reading">
+                <label for="hobbyReading1">Reading</label><br>
+                <input type="checkbox" id="hobbyTraveling1" name="hobbies1[]" value="Traveling">
+                <label for="hobbyTraveling1">Traveling</label><br>
+                <input type="checkbox" id="hobbyGaming1" name="hobbies1[]" value="Gaming">
+                <label for="hobbyGaming1">Gaming</label><br>
+                <span class="error" id="hobbiesError1"></span>
+            </div>
+
+            <div class="form-group">
+                <label>Gender:</label><br>
+                <input type="radio" id="male1" name="gender1" value="male">
+                <label for="male1">Male</label><br>
+                <input type="radio" id="female1" name="gender1" value="female">
+                <label for="female1">Female</label><br>
+                <input type="radio" id="other1" name="gender1" value="other">
+                <label for="other1">Other</label><br>
+                <span class="error" id="genderError1"></span>
+            </div>
+
+            <div class="form-group">
+                <label for="country1">Country:</label>
+                <select id="country1" name="country1">
+                    <option value="">Select your country</option>
+                    <option value="India">India</option>
+                    <option value="USA">USA</option>
+                    <option value="Canada">Canada</option>
+                    <option value="Australia">Australia</option>
+                </select>
+                <span class="error" id="countryError1"></span>
+            </div>
+
+            <div class="form-group">
+                <label for="message">Message:</label><br>
+                <textarea id="message1" name="message"></textarea>
+                <span class="error" id="messageError1"></span>
+            </div>
+
+            <div class="form-group">
+                <!-- Changed type to 'button' and added id 'submitBtn' -->
+                <input type="button" id="submitBtn" value="Submit">
+            </div>
+        </form>
+
+        <div id="successMessage1" class="success-message">
+            Form submitted successfully!
+        </div>
+    </div>
+
+    <!-- jQuery script -->
+    <script src="js/validation.js"></script>
+</body>
+</html>
